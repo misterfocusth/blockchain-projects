@@ -1,0 +1,30 @@
+{
+  "name": "lesson_6-hardhat-simple-storage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "npx hardhat compile",
+    "deploy:hardhat": "npx hardhat run ignition/modules/deploy.js --network hardhat",
+    "deploy:sepolia": "npx hardhat run ignition/modules/deploy.js --network sepolia",
+    "deploy:localhost": "npx hardhat run ignition/modules/deploy.js --network localhost",
+    "clean:deploy:hardhat": "npm run clean && npm run deploy:hardhat",
+    "clean:deploy:sepolia": "npm run clean && npm run deploy:sepolia",
+    "clean:deploy:localhost": "npm run clean && npm run deploy:localhost"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "dotenv": "^16.4.7",
+    "hardhat": "^2.22.19"
+  },
+  "dependencies": {
+    "@nomicfoundation/hardhat-verify": "^2.0.13",
+    "hardhat-gas-reporter": "^2.2.2",
+    "solidity-coverage": "^0.8.14"
+  }
+}
